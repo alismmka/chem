@@ -11,7 +11,7 @@ public class Pouring : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,16 +19,17 @@ public class Pouring : MonoBehaviour
     {
         currangle = Vector3.Angle(Vector3.down, transform.up);
 
-     if (Vector3.Angle(Vector3.down,transform.up)>Pourangle)
+        if (Vector3.Angle(Vector3.down, transform.up) > Pourangle)
         {
             pourfx.Play();
             pour = true;
+            GetComponent<Collider>().isTrigger = true;
         }
         else
         {
             pourfx.Stop();
             pour = false;
-
+            GetComponent<Collider>().isTrigger = false;
         }
     }
 }
