@@ -6,6 +6,7 @@ using UnityEngine;
 public class beaker : MonoBehaviour
 {
     public GameObject explodefx;
+
     List<string> beakerChemicals = new List<string>();
     List<string> soidumExplodion = new List<string>();
     List<string> rustRxn = new List<string>();
@@ -113,7 +114,7 @@ public class beaker : MonoBehaviour
     }
     void gas()
     {
-
+        Instantiate()
     }
     
     void changecolor(Color mixcolor)

@@ -5,6 +5,7 @@ using TMPro;
 
 public class Gamemanager : MonoBehaviour
 {
+    public int phase = 1;
     public bool objective1;
     public TMP_Text txtref;
     public TMP_Text txtcontent;
