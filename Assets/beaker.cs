@@ -6,6 +6,14 @@ using UnityEngine;
 public class beaker : MonoBehaviour
 {
     public GameObject explodefx;
+    public GameObject gasfx;
+    public GameObject o2fx;
+    public GameObject norxfx;
+
+    public Animator fillanim;
+
+    public Gamemanager manref;
+
 
     List<string> beakerChemicals = new List<string>();
     List<string> soidumExplodion = new List<string>();
@@ -13,6 +21,7 @@ public class beaker : MonoBehaviour
     List<string> oxogeyprodRxn = new List<string>();
     List<string> sulfarExplodeRxn = new List<string>();
     List<string> gasleak = new List<string>();
+
    
 
     // List<List<string>> reactionLists = new List<List<string>>();
@@ -26,7 +35,7 @@ public class beaker : MonoBehaviour
         sulfarExplodeRxn.Add("water");
         sulfarExplodeRxn.Add("sulfur");
 
-        oxogeyprodRxn.Add("water");
+        oxogeyprodRxn.Add("flame");
         oxogeyprodRxn.Add("peroxide");
 
         rustRxn.Add("water");
@@ -48,8 +57,12 @@ public class beaker : MonoBehaviour
             beakerChemicals.Add(tube.type);
             Debug.Log($"add tube {tube.type}");
 
+            fillanim.SetBool("1", true);
+
             if (beakerChemicals.Count == 2)
             {
+                fillanim.SetBool("2", true);
+
                 Debug.Log($"you have 2 chemicals ");
                 foreach (var item in beakerChemicals)
                 {
@@ -59,7 +72,7 @@ public class beaker : MonoBehaviour
                 beakerChemicals.Clear();
 
             }
-            tube.gameObject.SetActive(false);
+           // tube.gameObject.SetActive(false);
 
         }
     }
@@ -84,7 +97,7 @@ public class beaker : MonoBehaviour
         else if (IsRxn(oxogeyprodRxn))
         {
             Debug.Log($"o2");
-
+            o2out();
             reset();
         }
         else if (IsRxn(rustRxn))
@@ -95,10 +108,13 @@ public class beaker : MonoBehaviour
         {
             Debug.Log($"gassss");
             gas();
+            reset();
+
         }
         else
         {
             Debug.Log($"no rxn occur");
+            Instantiate(norxfx, transform.position, transform.rotation);
 
 
         }
@@ -111,10 +127,26 @@ public class beaker : MonoBehaviour
     void explode()
     {
         Instantiate(explodefx, transform.position, transform.rotation);
+        if(manref.phase==1)
+        {
+            manref.objective = true;
+        }
     }
     void gas()
     {
-        Instantiate()
+        Instantiate(gasfx, transform.position, transform.rotation);
+        if (manref.phase == 2)
+        {
+            manref.objective = true;
+        }
+    }
+    void o2out()
+    {
+        Instantiate(o2fx, transform.position, transform.rotation);
+        if (manref.phase == 3)
+        {
+            manref.objective = true;
+        }
     }
     
     void changecolor(Color mixcolor)
@@ -124,6 +156,8 @@ public class beaker : MonoBehaviour
 
     void reset()
     {
+        fillanim.SetBool("1", false);
+        fillanim.SetBool("2", false);
         Debug.Log($"Reset has been called");
     }
 }
