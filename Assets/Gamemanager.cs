@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class Gamemanager : MonoBehaviour
             phase++;
             objective = false;
         }
+    }
+
+    public void mainmenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void winstate()
