@@ -9,10 +9,11 @@ public class Pouring : MonoBehaviour
     public ParticleSystem pourfx;
     public float Pourangle;
     public float currangle;
+    AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {
-
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class Pouring : MonoBehaviour
         {
             pourfx.Play();
             pour = true;
+            aud.Play();
             
             //GetComponent<Collider>().isTrigger = true;
         }
@@ -31,6 +33,7 @@ public class Pouring : MonoBehaviour
         {
             pourfx.Stop();
             pour = false;
+            aud.Stop();
             //GetComponent<Collider>().isTrigger = false;
         }
     }

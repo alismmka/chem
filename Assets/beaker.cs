@@ -18,6 +18,7 @@ public class beaker : MonoBehaviour
 
     public AudioClip[] advsfx;
     AudioSource aud;
+ public AudioSource erraud;
 
     public float oritimer;
     public float timer;
@@ -38,6 +39,8 @@ public class beaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
+
         Debug.Log("started");
         soidumExplodion.Add("water");
         soidumExplodion.Add("sodium");
@@ -143,7 +146,7 @@ public class beaker : MonoBehaviour
             Debug.Log($"no rxn occur");
             Instantiate(norxfx, transform.position, transform.rotation);
             reset();
-            aud.PlayOneShot(advsfx[1]);
+            erraud.Play();
 
 
 
@@ -160,7 +163,7 @@ public class beaker : MonoBehaviour
         if(manref.phase==1)
         {
             manref.objective = true;
-            aud.PlayOneShot(advsfx[0]);
+            aud.Play();
         }
     }
     void gas()
@@ -169,7 +172,7 @@ public class beaker : MonoBehaviour
         if (manref.phase == 2)
         {
             manref.objective = true;
-            aud.PlayOneShot(advsfx[0]);
+            aud.Play();
 
         }
     }
@@ -179,7 +182,7 @@ public class beaker : MonoBehaviour
         if (manref.phase == 3)
         {
             manref.objective = true;
-            aud.PlayOneShot(advsfx[0]);
+            aud.Play();
 
         }
     }
