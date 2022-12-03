@@ -1032,6 +1032,8 @@ struct AssemblyU5BU5D_t97B7B4E3FD4DA4944A4BFAA4DC484EA7D990B339;
 struct AssetLoadingSubsystemU5BU5D_t08CC4139E69DB2317D5DFA2840874B89A3E5038C;
 // UnityEngine.Rendering.AttachmentDescriptor[]
 struct AttachmentDescriptorU5BU5D_tC70107EBD955FE94BA31C7FDC146069EF9C547C1;
+// UnityEngine.AudioClip[]
+struct AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31;
 // System.Boolean[]
 struct BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4;
 // UnityEngine.BoundingSphere[]
@@ -1202,6 +1204,8 @@ struct TMP_PageInfoU5BU5D_tE3DAAA8E2E9147F97C424A9034F677A516E8DAF9;
 struct TMP_SubMeshU5BU5D_t48FE70F8537594C6446E85588EB5D69635194CB9;
 // TMPro.TMP_SubMeshUI[]
 struct TMP_SubMeshUIU5BU5D_tC77B263183A59A75345C26152457207EAC3BBF29;
+// TMPro.TMP_Text[]
+struct TMP_TextU5BU5D_t12384CBAF397196B9A7886087BDC8C19D800C24F;
 // TMPro.TMP_WordInfo[]
 struct TMP_WordInfoU5BU5D_tD1759E5A84DCCCD42B718D79E953E72A432BB4DC;
 // UnityEngine.UI.Text[]
@@ -1556,6 +1560,8 @@ struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580;
 struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 // UnityEngine.GameObject
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
+// Gamemanager
+struct Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872;
 // UnityEngineInternal.GenericStack
 struct GenericStack_t1FB49AB7D847C97ABAA97AB232CA416CABD24C49;
 // UnityEngine.GlobalJavaObjectRef
@@ -35943,12 +35949,12 @@ struct Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872  : public MonoBehav
 {
 	// System.Int32 Gamemanager::phase
 	int32_t ___phase_4;
-	// System.Boolean Gamemanager::objective1
-	bool ___objective1_5;
+	// System.Boolean Gamemanager::objective
+	bool ___objective_5;
 	// TMPro.TMP_Text Gamemanager::txtref
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___txtref_6;
-	// TMPro.TMP_Text Gamemanager::txtcontent
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___txtcontent_7;
+	// TMPro.TMP_Text[] Gamemanager::txtcontents
+	TMP_TextU5BU5D_t12384CBAF397196B9A7886087BDC8C19D800C24F* ___txtcontents_7;
 };
 
 // Gauntlet
@@ -37606,18 +37612,38 @@ struct beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4  : public MonoBehaviour_
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___explodefx_4;
 	// UnityEngine.GameObject beaker::gasfx
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___gasfx_5;
+	// UnityEngine.GameObject beaker::o2fx
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___o2fx_6;
+	// UnityEngine.GameObject beaker::norxfx
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___norxfx_7;
+	// UnityEngine.MeshRenderer beaker::crender
+	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___crender_8;
+	// UnityEngine.Animator beaker::fillanim
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___fillanim_9;
+	// Gamemanager beaker::manref
+	Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872* ___manref_10;
+	// UnityEngine.AudioClip[] beaker::advsfx
+	AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* ___advsfx_11;
+	// UnityEngine.AudioSource beaker::aud
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___aud_12;
+	// System.Single beaker::oritimer
+	float ___oritimer_13;
+	// System.Single beaker::timer
+	float ___timer_14;
+	// System.Boolean beaker::fillable
+	bool ___fillable_15;
 	// System.Collections.Generic.List`1<System.String> beaker::beakerChemicals
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___beakerChemicals_6;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___beakerChemicals_16;
 	// System.Collections.Generic.List`1<System.String> beaker::soidumExplodion
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___soidumExplodion_7;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___soidumExplodion_17;
 	// System.Collections.Generic.List`1<System.String> beaker::rustRxn
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___rustRxn_8;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___rustRxn_18;
 	// System.Collections.Generic.List`1<System.String> beaker::oxogeyprodRxn
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___oxogeyprodRxn_9;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___oxogeyprodRxn_19;
 	// System.Collections.Generic.List`1<System.String> beaker::sulfarExplodeRxn
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___sulfarExplodeRxn_10;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___sulfarExplodeRxn_20;
 	// System.Collections.Generic.List`1<System.String> beaker::gasleak
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___gasleak_11;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___gasleak_21;
 };
 
 // chemtype
@@ -45919,9 +45945,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5301[27] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5302[23] = 
 {
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5304[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5304[18] = 
 {
-	static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___explodefx_4)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___gasfx_5)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___beakerChemicals_6)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___soidumExplodion_7)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___rustRxn_8)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___oxogeyprodRxn_9)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___sulfarExplodeRxn_10)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___gasleak_11)),};
+	static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___explodefx_4)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___gasfx_5)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___o2fx_6)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___norxfx_7)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___crender_8)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___fillanim_9)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___manref_10)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___advsfx_11)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___aud_12)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___oritimer_13)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___timer_14)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___fillable_15)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___beakerChemicals_16)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___soidumExplodion_17)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___rustRxn_18)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___oxogeyprodRxn_19)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___sulfarExplodeRxn_20)),static_cast<int32_t>(offsetof(beaker_tCF6763E72A0B67C718366F66995A90654CE1B6F4, ___gasleak_21)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5305[1] = 
 {
 	static_cast<int32_t>(offsetof(chemtype_t9134DBC33334340BF30F98304EE7F9DF8C1AC2F6, ___type_4)),};
@@ -45939,7 +45965,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5309[1] =
 	static_cast<int32_t>(offsetof(Follower_t5BEE8347DCBDC4E2433DDE9FE959EC30B3442A71, ___followee_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5310[4] = 
 {
-	static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___phase_4)),static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___objective1_5)),static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___txtref_6)),static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___txtcontent_7)),};
+	static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___phase_4)),static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___objective_5)),static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___txtref_6)),static_cast<int32_t>(offsetof(Gamemanager_tDAEFEF127708CD195E1F14B8C9EE1FCB207EC872, ___txtcontents_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5311[2] = 
 {
 	static_cast<int32_t>(offsetof(CFX_AutoStopLoopedEffect_t96B089426A22135A69F9AD4D40B72157FAAE5A3A, ___effectDuration_4)),static_cast<int32_t>(offsetof(CFX_AutoStopLoopedEffect_t96B089426A22135A69F9AD4D40B72157FAAE5A3A, ___d_5)),};

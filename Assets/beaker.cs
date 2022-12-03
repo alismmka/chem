@@ -10,9 +10,19 @@ public class beaker : MonoBehaviour
     public GameObject o2fx;
     public GameObject norxfx;
 
+    public MeshRenderer crender;
+
     public Animator fillanim;
 
     public Gamemanager manref;
+
+    public AudioClip[] advsfx;
+    AudioSource aud;
+
+    public float oritimer;
+    public float timer;
+
+    public bool fillable;
 
 
     List<string> beakerChemicals = new List<string>();
@@ -46,18 +56,32 @@ public class beaker : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if(!fillable)
+        {
+            timer -= Time.deltaTime;
+        }
+        if(timer<=0)
+        {
+            fillable = true;
+        }
 
+    }
     private void OnTriggerEnter(Collider other)
     {
         chemtype tube;
         other.gameObject.TryGetComponent<chemtype>(out tube);
-        if (tube != null)
+        if (tube != null && !beakerChemicals.Contains(tube.type)&& fillable)
         {
+            timer = oritimer;
+            fillable = false;
+
             beakerChemicals.Add(tube.type);
             Debug.Log($"add tube {tube.type}");
 
             fillanim.SetBool("1", true);
+            changecolor(Random.ColorHSV());
 
             if (beakerChemicals.Count == 2)
             {
@@ -104,7 +128,10 @@ public class beaker : MonoBehaviour
         {
             Debug.Log($"rust");
             changecolor(Color.yellow);
-        }else if (IsRxn(gasleak))
+            reset();
+
+        }
+        else if (IsRxn(gasleak))
         {
             Debug.Log($"gassss");
             gas();
@@ -115,6 +142,9 @@ public class beaker : MonoBehaviour
         {
             Debug.Log($"no rxn occur");
             Instantiate(norxfx, transform.position, transform.rotation);
+            reset();
+            aud.PlayOneShot(advsfx[1]);
+
 
 
         }
@@ -130,6 +160,7 @@ public class beaker : MonoBehaviour
         if(manref.phase==1)
         {
             manref.objective = true;
+            aud.PlayOneShot(advsfx[0]);
         }
     }
     void gas()
@@ -138,6 +169,8 @@ public class beaker : MonoBehaviour
         if (manref.phase == 2)
         {
             manref.objective = true;
+            aud.PlayOneShot(advsfx[0]);
+
         }
     }
     void o2out()
@@ -146,12 +179,15 @@ public class beaker : MonoBehaviour
         if (manref.phase == 3)
         {
             manref.objective = true;
+            aud.PlayOneShot(advsfx[0]);
+
         }
     }
     
     void changecolor(Color mixcolor)
     {
         Debug.Log($"color changed to {mixcolor} ");
+        crender.material.color = mixcolor;
     }
 
     void reset()
