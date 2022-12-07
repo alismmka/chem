@@ -30,4 +30,14 @@ public class menumanager : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    
+    public void lvl4()
+    {
+        SceneManager.LoadScene(4);
+    }
+    
+    public void lvl5()
+    {
+        SceneManager.LoadScene(5);
+    }
 }

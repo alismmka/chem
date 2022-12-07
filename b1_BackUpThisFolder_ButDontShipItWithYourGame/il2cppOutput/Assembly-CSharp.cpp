@@ -580,6 +580,8 @@ struct SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6;
 struct SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A;
 // UnityEngine.UI.Selectable
 struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
+// Seqeditor
+struct Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2;
 // UnityEngine.Shader
 struct Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692;
 // TMPro.Examples.ShaderPropAnimator
@@ -3504,6 +3506,19 @@ struct Touch_t03E51455ED508492B3F278903A0114FA0E87B417
 	float ___m_AzimuthAngle_13;
 };
 
+// UnityEngine.TouchScreenKeyboard
+struct TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A  : public RuntimeObject
+{
+	// System.IntPtr UnityEngine.TouchScreenKeyboard::m_Ptr
+	intptr_t ___m_Ptr_0;
+};
+
+struct TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A_StaticFields
+{
+	// System.Boolean UnityEngine.TouchScreenKeyboard::<disableInPlaceEditing>k__BackingField
+	bool ___U3CdisableInPlaceEditingU3Ek__BackingField_1;
+};
+
 // TMPro.VertexGradient
 struct VertexGradient_t2C057B53C0EA6E987C2B7BAB0305E686DA1C9A8F 
 {
@@ -5353,6 +5368,17 @@ struct RopeControllerSimple_tB9FD28DB97FD885A1B06BCAB86E0E3FA0BA0309B  : public 
 	float ___winchSpeed_12;
 	// UnityEngine.SpringJoint RopeControllerSimple::springJoint
 	SpringJoint_t0DDC4B5817F02316DD25FDB34CB5ADF462E1AA09* ___springJoint_13;
+};
+
+// Seqeditor
+struct Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.TouchScreenKeyboard Seqeditor::keyboard
+	TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* ___keyboard_4;
+	// TMPro.TMP_Text Seqeditor::Customtxtref
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___Customtxtref_5;
+	// TMPro.TMP_Text Seqeditor::Oritxtref
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___Oritxtref_6;
 };
 
 // TMPro.Examples.ShaderPropAnimator
@@ -8824,6 +8850,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_Raycast_m1B27F500505FFB57D78548B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* RaycastHit_get_collider_m84B160439BBEAB6D9E94B799F720E25C9E2D444D (RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* __this, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.GameObject::get_activeSelf()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+// UnityEngine.TouchScreenKeyboard UnityEngine.TouchScreenKeyboard::Open(System.String,UnityEngine.TouchScreenKeyboardType)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* TouchScreenKeyboard_Open_m7E1514D1FA05AB51D07B91DD111DE80D0AC278FC (String_t* ___text0, int32_t ___keyboardType1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.TouchScreenKeyboard::set_active(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchScreenKeyboard_set_active_m4382D57F87E4C86B59864E86BE93A8A2A474B7C2 (TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* __this, bool ___value0, const RuntimeMethod* method) ;
+// System.String UnityEngine.TouchScreenKeyboard::get_text()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TouchScreenKeyboard_get_text_m74593E81B017446204A9DB1F7359922A2C005B1E (TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* __this, const RuntimeMethod* method) ;
 // TMPro.TMP_InputField/SubmitEvent TMPro.TMP_InputField::get_onSubmit()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* TMP_InputField_get_onSubmit_mAA494FA0B3CFFB2916B399BD5D87C2E1AA637B90_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityAction`1<System.String>::.ctor(System.Object,System.IntPtr)
@@ -12770,6 +12802,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void menumanager_lvl2_m3D89ABC0618C661DFDAB2F
 		// SceneManager.LoadScene(2);
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(2, NULL);
+		// }
+		return;
+	}
+}
+// System.Void menumanager::lvl3()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void menumanager_lvl3_mE7E160417E552DDFA7F1A5C1FB1569D18DB721AC (menumanager_tCF6EA78523B7B7B8E1D7BCAA9AC3DBB705ED78B6* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene(3);
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(3, NULL);
+		// }
+		return;
+	}
+}
+// System.Void menumanager::lvl4()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void menumanager_lvl4_m6718926A26D01D4BCBB2B229C4A829988714D494 (menumanager_tCF6EA78523B7B7B8E1D7BCAA9AC3DBB705ED78B6* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene(4);
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void menumanager::lvl5()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void menumanager_lvl5_mC3DFEAFA806F4CFEE7D34E98118C0DEA83974415 (menumanager_tCF6EA78523B7B7B8E1D7BCAA9AC3DBB705ED78B6* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene(5);
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(5, NULL);
 		// }
 		return;
 	}
@@ -17655,6 +17738,121 @@ IL_00b1:
 }
 // System.Void WhipTip::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WhipTip__ctor_m5D8B1AEABB2421830A6049530837A2F201122353 (WhipTip_t3C00C84DA73DFCD250BDBCF6869FF50B4D301554* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Seqeditor::ShowKeyboard()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Seqeditor_ShowKeyboard_mB646D71342EF7A876F22F9CDF2FE334116C10BDD (Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_0;
+		L_0 = TouchScreenKeyboard_Open_m7E1514D1FA05AB51D07B91DD111DE80D0AC278FC(_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, 0, NULL);
+		__this->___keyboard_4 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___keyboard_4), (void*)L_0);
+		// }
+		return;
+	}
+}
+// System.Void Seqeditor::CloseKeyboard()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Seqeditor_CloseKeyboard_mB5683B734C67FFE55ED99A88A158DF9447DC3D1A (Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2* __this, const RuntimeMethod* method) 
+{
+	{
+		// keyboard.active = false;
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_0 = __this->___keyboard_4;
+		NullCheck(L_0);
+		TouchScreenKeyboard_set_active_m4382D57F87E4C86B59864E86BE93A8A2A474B7C2(L_0, (bool)0, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Seqeditor::savetxt()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Seqeditor_savetxt_m76C2C09C96922FA9FB3177ABE39E5849B98D3274 (Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2* __this, const RuntimeMethod* method) 
+{
+	{
+		// Oritxtref.text = Customtxtref.text;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___Oritxtref_6;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = __this->___Customtxtref_5;
+		NullCheck(L_1);
+		String_t* L_2;
+		L_2 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_1);
+		NullCheck(L_0);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, L_2);
+		// }
+		return;
+	}
+}
+// System.Void Seqeditor::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Seqeditor_Start_m4E8F77034BE049754753EF18334065DBFA905E09 (Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void Seqeditor::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Seqeditor_Update_m3098C6D14FAAF11FE1BA5ADCE3D7E74A496C04E1 (Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if(Customtxtref != null && keyboard!=null)
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___Customtxtref_5;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_2 = __this->___keyboard_4;
+		if (!L_2)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		// Customtxtref.text = keyboard.text;
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___Customtxtref_5;
+		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_4 = __this->___keyboard_4;
+		NullCheck(L_4);
+		String_t* L_5;
+		L_5 = TouchScreenKeyboard_get_text_m74593E81B017446204A9DB1F7359922A2C005B1E(L_4, NULL);
+		NullCheck(L_3);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_3, L_5);
+	}
+
+IL_002c:
+	{
+		// }
+		return;
+	}
+}
+// System.Void Seqeditor::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Seqeditor__ctor_m03B41755B33719CB97F5BAD0F7D94B029412A1C3 (Seqeditor_tE677DD944BB582C06998EFE3246D0E46FE8554B2* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);

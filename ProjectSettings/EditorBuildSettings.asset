@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/credits.unity
     guid: ff3622aaa3071ee4890d601b33626d86
+  - enabled: 1
+    path: Assets/Scenes/space.unity
+    guid: 18ec84fd4dd457640b1997977dcccb7a
+  - enabled: 1
+    path: Assets/Scenes/desert.unity
+    guid: b7fe164d5be1c1b49b31a5e281684afa
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fd8bd81477d1f1847b1843f837fc4bcb,
       type: 2}
