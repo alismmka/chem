@@ -21,4 +21,8 @@ public class menumanager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void lvl2()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

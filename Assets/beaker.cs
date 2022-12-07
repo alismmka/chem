@@ -48,7 +48,7 @@ public class beaker : MonoBehaviour
         sulfarExplodeRxn.Add("water");
         sulfarExplodeRxn.Add("sulfur");
 
-        oxogeyprodRxn.Add("flame");
+        oxogeyprodRxn.Add("water");
         oxogeyprodRxn.Add("peroxide");
 
         rustRxn.Add("water");

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/chem.unity
     guid: e32e59d4fdec3f8468982db91bf316b5
+  - enabled: 1
+    path: Assets/Scenes/edit.unity
+    guid: f5beefb80b158d1468ed857680bc0e6b
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fd8bd81477d1f1847b1843f837fc4bcb,
       type: 2}

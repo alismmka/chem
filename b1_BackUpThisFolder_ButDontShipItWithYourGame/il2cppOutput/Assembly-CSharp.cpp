@@ -893,7 +893,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral55046098B6B1F1550223730F456565C0FC547C8D
 IL2CPP_EXTERN_C String_t* _stringLiteral55F097B2603C69F9353B2AE824F1FE43E6B46F87;
 IL2CPP_EXTERN_C String_t* _stringLiteral575E5A0083BC77262C0231992316AB4991E48FB4;
 IL2CPP_EXTERN_C String_t* _stringLiteral5A3D6FC5AC03F283E51A1E494164E2F6D006FCE2;
-IL2CPP_EXTERN_C String_t* _stringLiteral6892C04278ADCFC7885E4F96C17CE2AF91FEC537;
 IL2CPP_EXTERN_C String_t* _stringLiteral71B680ABF9213B3E8FB888056C235C79CFE83314;
 IL2CPP_EXTERN_C String_t* _stringLiteral71BD498E5FC7E3B8709294B88AB8FAB2CFF77CAE;
 IL2CPP_EXTERN_C String_t* _stringLiteral75A94EE44309525CF46FB9C022ED6E9EFAC8B506;
@@ -9401,7 +9400,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void beaker_Start_mC7AA9310A57F7EB241F8D15380
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral008F6E1BE2B28B633406A8328A0C886C24DD0A51);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2151463174306A796A3663CF3390E3E47A86E94C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42068B0B535BEE0AD0CBD0E4D92D9B191EDBB05B);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6892C04278ADCFC7885E4F96C17CE2AF91FEC537);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral993D680CAE3CD05AD1A1007AE8ADDA98BF5B8B0A);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9A87ABEDF7A826B361C704F3F59CE758D69C9E92);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDDCB75DA52ED2EA4FABF4B7F19C3EB2CB1E414CB);
@@ -9432,10 +9430,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void beaker_Start_mC7AA9310A57F7EB241F8D15380
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_4 = __this->___sulfarExplodeRxn_21;
 		NullCheck(L_4);
 		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_4, _stringLiteralDDCB75DA52ED2EA4FABF4B7F19C3EB2CB1E414CB, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		// oxogeyprodRxn.Add("flame");
+		// oxogeyprodRxn.Add("water");
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_5 = __this->___oxogeyprodRxn_20;
 		NullCheck(L_5);
-		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_5, _stringLiteral6892C04278ADCFC7885E4F96C17CE2AF91FEC537, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
+		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_5, _stringLiteral42068B0B535BEE0AD0CBD0E4D92D9B191EDBB05B, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
 		// oxogeyprodRxn.Add("peroxide");
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = __this->___oxogeyprodRxn_20;
 		NullCheck(L_6);
@@ -12755,6 +12753,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void menumanager_lvl1_m53DFA7669BEFB921870F40
 		// SceneManager.LoadScene(1);
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(1, NULL);
+		// }
+		return;
+	}
+}
+// System.Void menumanager::lvl2()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void menumanager_lvl2_m3D89ABC0618C661DFDAB2F3C7E7BC8E8093ABBB8 (menumanager_tCF6EA78523B7B7B8E1D7BCAA9AC3DBB705ED78B6* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// SceneManager.LoadScene(2);
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(2, NULL);
 		// }
 		return;
 	}
